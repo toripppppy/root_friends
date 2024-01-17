@@ -1,6 +1,6 @@
-from .counter_daemon import CounterDaemon
-from .display_app import DisplayApp
-from .api import CounterAPI
+from root_friends.counter_daemon import CounterDaemon
+from root_friends.display_app import DisplayApp
+from root_friends.api import CounterAPI
 
 import threading
 import uvicorn
