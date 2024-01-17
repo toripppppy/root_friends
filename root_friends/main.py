@@ -5,22 +5,22 @@ from .api import CounterAPI
 import threading
 import uvicorn
 
+# キータイプ数カウンター
 counter = CounterDaemon()
+# APIサーバー
 server = CounterAPI(counter)
+# メニューバー表示アプリ
+app = DisplayApp(counter)
 
 def serve():
     uvicorn.run(server, port=8096)
 
 def start_threads():
-    # カウンター
     thread1 = threading.Thread(target=counter.listen)
-    # APIサーバー
     thread2 = threading.Thread(target=serve)
-
     thread1.start()
     thread2.start()
 
 if __name__ == "__main__":
     start_threads()
-    app = DisplayApp(counter)
     app.run()

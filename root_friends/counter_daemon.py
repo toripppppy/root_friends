@@ -5,9 +5,9 @@ class CounterDaemon:
         self.count = 0
 
     def listen(self):
-        # start loop
         print("start listen")
         with Listener(on_press=self.on_press) as listener:
+            # start loop
             listener.join()
 
     def on_press(self, key):
