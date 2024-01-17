@@ -7,10 +7,10 @@ Usage:
 
 from setuptools import setup
 
-APP = ['src/main.py']
+APP = ['root_friends/main.py']
 DATA_FILES = []
 OPTIONS = {
-    'packages': ['src', 'pynput', 'uvicorn', 'rumps', 'fastapi'],
+    'packages': ['root_friends', 'pynput', 'uvicorn', 'rumps', 'fastapi'],
     'includes': ['pynput', 'uvicorn', 'rumps', 'fastapi']
 }
 
